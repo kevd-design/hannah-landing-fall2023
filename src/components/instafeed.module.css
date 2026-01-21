@@ -1,31 +1,63 @@
 .instaFeedContainer {
     max-width: 1024px;
     margin: 0 auto;
-    padding: 128px 0;
+    padding: 16px 0;
+    background-color: #140B02;
 }
 
 .feedContainer {
-    max-width: 500px;
+    max-width: 1024px;
     margin: 0 auto;
-    cursor: default;
+    padding: 16px;
+    object: cover;
+}
+
+.instagramFeed {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.instagramPost {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    
 }
 
 .sectionIntro {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 24px;
     padding: 8px;
+}
+
+.sectionIntro h2 {
+    font-family: "Gilda Display", sans-serif;
+    font-size: 32px;
+    color: white;
+    margin: 0;
+}
+
+.sectionIntro p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    color: white;
+    margin: 0;
+    line-height: 1.4;
 }
 
 .socialIcons {
     display: flex;
     justify-content: center;
     gap: 32px;
-    padding: 32px 0;
+    padding: 32px 48px;
 }
 
 .social {
     width: 50px;
+    height: 50px;
 }
 
 .social:hover {
@@ -39,6 +71,13 @@
         display: flex;
         padding: 256px 96px;
         align-items: center;
-        
+    }
+    
+    .feedContainer {
+        max-width: 500px;
+    }
+    
+    .instagramFeed {
+        gap: 32px;
     }
 }

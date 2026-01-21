@@ -1,5 +1,4 @@
 import * as React from 'react'
-import useExternalScripts from "../hooks/useExternalScripts"
 import { StaticImage } from "gatsby-plugin-image"
 import {
     social,
@@ -7,6 +6,8 @@ import {
     sectionIntro,
     feedContainer,
     instaFeedContainer,
+    instagramPost,
+    instagramFeed,
     
     
 } from "./instafeed.module.css"
@@ -18,7 +19,7 @@ const InstaFeed = () => {
             
             <div className={sectionIntro}>
                 <h2>Follow us!</h2>
-                <p>Join our ever-growing community of home renovation enthusists on Instagram and Facebook!</p>
+                <p>Join our ever-growing community of home renovation enthusiasts on Instagram and Facebook!</p>
                 <div className={socialIcons}>
                     <a target="_blank" rel="noreferrer" href="https://www.instagram.com/vantaconstruction/">
                         <StaticImage
@@ -26,7 +27,7 @@ const InstaFeed = () => {
                             src="../images/Instagram_Glyph_White.svg"
                             placeholder="blurred"
                             className={social}
-
+                            
                         />
                     </a>
                     <a target="_blank" rel="noreferrer" href="https://www.facebook.com/profile.php?id=61554693466954">
@@ -40,19 +41,36 @@ const InstaFeed = () => {
                     
                 </div>
             </div>
-        <div 
-            className={`taggbox ${feedContainer}`}
-            
-            style={{
-                width:"100%",
-                height: "100%"
-            }}
-            data-widget-id="140972"
-            data-tags="false"
-        >
-            
-        </div>
-        {useExternalScripts({url:"https://widget.taggbox.com/embed-lite.min.js"})}
+            <div className={feedContainer}>
+                <div className={instagramFeed}>
+                    <div className={instagramPost}>
+                        <StaticImage
+                            alt="Construction site with excavator working on foundation."
+                            src="../images/services/Concrete.jpg"
+                            placeholder="blurred"
+                            style={{
+                                width: "100%",
+                                objectPosition: "center bottom",
+                                objectFit: "cover",
+                                borderRadius: "10px",
+                           }}
+                        />
+                    </div>
+                    <div className={instagramPost}>
+                        <StaticImage
+                            alt="Beautiful deck construction project completed."
+                            src="../images/services/Decks.jpg"
+                            placeholder="blurred"
+                            style={{
+                                width: "100%",
+                                objectPosition: "center",
+                                objectFit: "cover",
+                                borderRadius: "10px"
+                            }}
+                        />
+                    </div>
+                </div>
+            </div>
         </div>
         
          
